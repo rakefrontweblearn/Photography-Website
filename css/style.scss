@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$whiteclr: #fff;
+$blackclr: #000;
+$hrborder: #efefef;
+$font-family: arimo;
+$tagClr: #4d4d4d;
+
+.navbar-brand{
+    font-family: $font-family;
+}
+.nav-link{
+    color: $hrborder;
+    text-transform: uppercase;
+}
+.custom-bg{
+    background-color: #00000000 !important;
+    z-index: 1;
+}
+.carousel {
+    position: relative;
+    margin-top: -70px;
+}
+.carousel-caption{
+    right: unset;
+    bottom: 35%;
+    left: 8.5%;
+    text-align: left;
+    color: $whiteclr !important;
+    width: 40%;
+    & p{
+        font-size: 50px;
+        font-family: $font-family;
+    }
+}
+
+.carousel-item{
+    & button {
+        position: absolute;
+        bottom: 15%;
+        left: 9%;
+        background-color: #393a4a;
+        padding: 5px 30px 8px;
+        border: none;
+        border-radius: 0;
+    }
+    & .hr_line{
+        height: 2px;
+        width: 81%;
+        background-color: $hrborder;
+        position: absolute;
+        bottom: 10%;
+        left: 9%;
+    }
+}
+.carousel-control-next, .carousel-control-prev{
+    width: 5%;
+}
+.carousel-control-next-icon{
+    position: absolute;
+    bottom: 15px;
+    left: -88px;
+    background-image: none !important;
+}
+.carousel-control-prev-icon{
+    position: absolute;
+    bottom: 15px;
+    background-image: none !important;
+    left: 115px;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: $hrborder;
+}
+.dg_gallery{
+    position: relative;
+    margin-top: 40px;
+    & .gallery_img{
+        &.mb-25{
+            margin-bottom: 25px;
+        }
+        & .vr-img{
+            height: 500px;
+            width: 100%;
+        }
+        & .hr-img{
+            width: 100%;
+            height: 200px;
+        }
+    }
+}
+
+#carouselExampleDarks{
+    position: relative;
+    margin-top: 0 !important;
+}
+.dg_testimonial{
+    & .mt-40{
+        margin: 40px 0;
+        & .test-indicators{
+            margin-bottom: -90px;
+            & [data-bs-target]{
+                background-color: #ababae;
+            }
+        }
+        & .test_prev{
+            filter: none;
+            bottom: -95px;
+            left: -5px;
+        }
+        & .test_next{
+            filter: none;
+            bottom: -95px;
+            left: 10px;
+        }
+        & .test_tagline{
+            color: $tagClr;
+            font-size: 18px;
+            margin-top: 60px;
+        }
+        & .test_psg{
+            color: $tagClr;
+            font-size: 14px;
+            margin-top: 150px;
+        }
+    }
+}
+.dg_middle_banner{
+    background-image: url('../images/dg_mdl_bg.jpg');
+    position: relative;
+    margin-top: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & p{
+        font-size: 50px;
+        width: 30%;
+        text-align: center;
+        color: $whiteclr;
+        font-family: $font-family;
+    }
+}
+
+.dg_pecific_text{
+    text-align: center;
+    height: 400px;
+    & h1{
+        font-size: 30px;
+        margin-top: 100px;
+        font-family: $font-family;
+        color: $tagClr;
+    }
+    & p{
+        width: 50%;
+        margin: 0 auto;
+        color: $tagClr;
+    }
+    & button{
+        background-color: #4d4d4d;
+        border: none;
+        border-radius: 0;
+        margin-top: 150px;
+    }
+}
+
+
+.multi_slider{
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.card {
+    overflow: hidden;
+    .card-img {
+      height: 20rem;
+    }
+    .card-img-container img {
+      object-fit: cover;
+      object-position: center;
+    //   max-height: 100%;
+    //   height: 20rem;
+    }
+    .card-img-overlay {
+      color: #fff;
+      font-weight: bold;
+      text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+    }
+  }
+  
+  /* small and extra-small screens */
+  @media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+      display: none;
+      &:first-child {
+        display: block;
+      }
+      .card-img-container img {
+        max-width: 100%;
+        height: 20rem;
+      }
+    }
+  }
+  
+  /* medium and up screens */
+  @media (min-width: 768px) {
+    .carousel-inner {
+      .carousel-item.active,
+      .carousel-item-next,
+      .carousel-item-prev {
+        display: flex;
+      }    
+    }
+    .card-img-container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      img {
+        display: inline-block;
+        // max-height: 100%;
+        margin: 0 -50%;
+      }
+    }
+  }
+  .multi_prev_icon{
+    bottom: -45px !important;
+    left: 10px;
+  }
+  .multi_next_icon{
+    bottom: -45px !important;
+    left: 20px;
+  }
+
+@media(max-width: 768px){
+    .carousel {
+        position: absolute;
+        top: 70px;
+    }
+    .carousel-caption p {
+        font-size: 16px;
+    }
+    .carousel-caption{
+        bottom: 22%;
+        width: 50%;
+    }
+    .carousel-control-prev-icon{
+        bottom: -8px;
+        left: 30px;
+    }
+    .carousel-control-next-icon{
+        bottom: -8px;
+        left: -45px;
+    }
+    .custom-bg {
+        background-color: rgb(0 0 0 / 75%) !important;
+        z-index: 1;
+    }
+    .navbar-toggler:focus{
+        box-shadow: none !important;
+    }
+    .carousel-indicators{
+        bottom: -18px;
+    }
+    .dg_gallery{
+        position: relative;
+        top: 80px;
+        & .gallery_img{
+            margin: 20px 0;
+        }
+    }
+    .dg_testimonial{
+        position: relative;
+    }
+    .multi_slider{
+        position: absolute;
+    }
+    .dg_testimonial .mt-40 .test_next {
+        filter: none;
+        bottom: -45px;
+        left: -10px;
+    }
+    .dg_testimonial .mt-40 .test_prev {
+        filter: none;
+        bottom: -45px;
+        left: -5px;
+    }
+    .dg_testimonial .mt-40 .test-indicators {
+        margin-bottom: -20px;
+    }
+    .dg_middle_banner p{
+        width: 100%;
+    }
+    .dg_pecific_text p{
+        width: 80%;
+    }
+
+}
